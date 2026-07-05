@@ -1,0 +1,14 @@
+const VALUE i64 = 42
+const LABEL str = "moglang/math v0.1.0"
+
+fn Add(left i64, right i64) i64 {
+    return left + right
+}
+
+fn Multiply(left i64, right i64) i64 {
+    return left * right
+}
+
+fn Name() str {
+    return LABEL
+}

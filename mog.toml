@@ -1,0 +1,10 @@
+kind = "source"
+module = "github.com/moglang/math"
+version = "v0.1.0"
+entry = "src/main.mog"
+import_name = "math"
+name = "math"
+author = "Moglang"
+description = "Small Mog source package for manual GitHub import testing."
+license = "MIT"
+dependencies = []
