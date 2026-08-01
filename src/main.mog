@@ -1,5 +1,61 @@
 const VALUE i64 = 42
-const LABEL str = "moglang/math v0.1.0"
+const LABEL str = "moglang/math v0.2.0"
+const PI f64 = 3.141592653589793
+const E f64 = 2.718281828459045
+
+fn absI64(value i64) i64 {
+    if (value < 0i64) return -value
+    return value
+}
+
+fn absF64(value f64) f64 {
+    if (value < 0.0) return -value
+    return value
+}
+
+fn minI64(left i64, right i64) i64 {
+    if (left < right) return left
+    return right
+}
+
+fn maxI64(left i64, right i64) i64 {
+    if (left > right) return left
+    return right
+}
+
+fn clampI64(value i64, minimum i64, maximum i64) i64 {
+    if (minimum > maximum) error("clampI64 minimum must not exceed maximum")
+    if (value < minimum) return minimum
+    if (value > maximum) return maximum
+    return value
+}
+
+fn minF64(left f64, right f64) f64 {
+    if (left < right) return left
+    return right
+}
+
+fn maxF64(left f64, right f64) f64 {
+    if (left > right) return left
+    return right
+}
+
+fn clampF64(value f64, minimum f64, maximum f64) f64 {
+    if (minimum > maximum) error("clampF64 minimum must not exceed maximum")
+    if (value < minimum) return minimum
+    if (value > maximum) return maximum
+    return value
+}
+
+fn squareRoot(value f64) f64 { return sqrt(value) }
+fn power(base f64, exponent f64) f64 { return pow(base, exponent) }
+fn floorValue(value f64) f64 { return floor(value) }
+fn ceilValue(value f64) f64 { return ceil(value) }
+
+fn roundValue(value f64) f64 {
+    if (value < 0.0) return ceil(value - 0.5)
+    return floor(value + 0.5)
+}
 
 fn Add(left i64, right i64) i64 {
     return left + right
