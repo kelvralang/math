@@ -1,0 +1,26 @@
+const math = @import("github.com/moglang/math")
+
+fn assert(condition bool, message str) void {
+    if (!condition) error(message)
+}
+
+assert(math.VALUE == 42i64, "legacy value")
+assert(math.LABEL == "moglang/math v0.2.0", "package label")
+assert(math.PI > 3.14159 && math.PI < 3.14160, "pi constant")
+assert(math.E > 2.71828 && math.E < 2.71829, "e constant")
+assert(math.absI64(-7i64) == 7i64 && math.absI64(7i64) == 7i64, "i64 absolute value")
+assert(math.absF64(-2.5) == 2.5 && math.absF64(2.5) == 2.5, "f64 absolute value")
+assert(math.minI64(3i64, 8i64) == 3i64 && math.maxI64(3i64, 8i64) == 8i64, "i64 min and max")
+assert(math.clampI64(-2i64, 0i64, 10i64) == 0i64, "i64 clamp low")
+assert(math.clampI64(12i64, 0i64, 10i64) == 10i64, "i64 clamp high")
+assert(math.clampI64(5i64, 0i64, 10i64) == 5i64, "i64 clamp in range")
+assert(math.minF64(3.5, 8.5) == 3.5 && math.maxF64(3.5, 8.5) == 8.5, "f64 min and max")
+assert(math.clampF64(-2.0, 0.0, 10.0) == 0.0, "f64 clamp low")
+assert(math.clampF64(12.0, 0.0, 10.0) == 10.0, "f64 clamp high")
+assert(math.squareRoot(81.0) == 9.0, "square root")
+assert(math.power(2.0, 8.0) == 256.0, "power")
+assert(math.floorValue(2.9) == 2.0 && math.ceilValue(2.1) == 3.0, "floor and ceiling")
+assert(math.roundValue(2.5) == 3.0 && math.roundValue(-2.5) == -3.0, "rounding")
+assert(math.Add(20i64, 22i64) == 42i64, "legacy addition")
+assert(math.Multiply(6i64, 7i64) == 42i64, "legacy multiplication")
+assert(math.Name() == math.LABEL, "legacy name")

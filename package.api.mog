@@ -1,0 +1,21 @@
+package math
+const VALUE i64
+const LABEL str
+const PI f64
+const E f64
+fn absI64(value i64) i64
+fn absF64(value f64) f64
+fn minI64(left i64, right i64) i64
+fn maxI64(left i64, right i64) i64
+fn clampI64(value i64, minimum i64, maximum i64) i64
+fn minF64(left f64, right f64) f64
+fn maxF64(left f64, right f64) f64
+fn clampF64(value f64, minimum f64, maximum f64) f64
+fn squareRoot(value f64) f64
+fn power(base f64, exponent f64) f64
+fn floorValue(value f64) f64
+fn ceilValue(value f64) f64
+fn roundValue(value f64) f64
+fn Add(left i64, right i64) i64
+fn Multiply(left i64, right i64) i64
+fn Name() str

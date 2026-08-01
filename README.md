@@ -1,16 +1,28 @@
-# math
+# moglang/math
 
-Small Mog source package used to manually test Go-style GitHub module imports.
+Portable numeric constants and helpers for Mog. The canonical import is
+`github.com/moglang/math`, and the package supports Mog runtime `^0.1.4`.
+
+```bash
+mog add github.com/moglang/math@v0.2.0
+```
 
 ```mog
 const math = @import("github.com/moglang/math")
-print(math.Add(math.VALUE, 8))
+
+print(math.PI)
+print(math.clampI64(12, 0, 10))
+print(math.squareRoot(81.0))
+print(math.roundValue(-2.6))
 ```
 
-Install from a Mog project:
+The package provides `i64` and `f64` absolute-value, minimum, maximum, and
+clamping helpers, plus wrappers for square root, powers, floor, ceiling, and
+rounding. Clamping rejects an inverted range. `roundValue` rounds halfway
+values away from zero.
 
-```bash
-../../build/interpreter add github.com/moglang/math@v0.1.0
-../../build/interpreter install
-../../build/interpreter run app.mog
-```
+The original `VALUE`, `LABEL`, `Add`, `Multiply`, and `Name` exports remain for
+source compatibility with the package's initial import-test release. New code
+should prefer the descriptive lower-camel-case helpers. The complete public
+contract is declared in `package.api.mog`. The package is licensed under MIT;
+see `LICENSE`.
