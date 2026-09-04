@@ -1,14 +1,14 @@
-# moglang/math
+# kelvralang/math
 
-Portable numeric constants and helpers for Mog. The canonical import is
-`github.com/moglang/math`, and the package supports Mog runtime `^0.1.4`.
+Portable numeric constants and helpers for Kelvra. The canonical import is
+`github.com/kelvralang/math`, and the package supports Kelvra runtime `^0.2.0`.
 
 ```bash
-mog add github.com/moglang/math@v0.2.0
+kelvra add github.com/kelvralang/math@v0.2.0
 ```
 
-```mog
-const math = @import("github.com/moglang/math")
+```kelvra
+const math = @import("github.com/kelvralang/math")
 
 print(math.PI)
 print(math.clampI64(12, 0, 10))
@@ -24,5 +24,5 @@ values away from zero.
 The original `VALUE`, `LABEL`, `Add`, `Multiply`, and `Name` exports remain for
 source compatibility with the package's initial import-test release. New code
 should prefer the descriptive lower-camel-case helpers. The complete public
-contract is declared in `package.api.mog`. The package is licensed under MIT;
+contract is declared in `package.api.kel`. The package is licensed under MIT;
 see `LICENSE`.

@@ -1,11 +1,11 @@
-const math = @import("github.com/moglang/math")
+const math = @import("github.com/kelvralang/math")
 
 fn assert(condition bool, message str) void {
     if (!condition) error(message)
 }
 
 assert(math.VALUE == 42i64, "legacy value")
-assert(math.LABEL == "moglang/math v0.2.0", "package label")
+assert(math.LABEL == "kelvralang/math v0.2.0", "package label")
 assert(math.PI > 3.14159 && math.PI < 3.14160, "pi constant")
 assert(math.E > 2.71828 && math.E < 2.71829, "e constant")
 assert(math.absI64(-7i64) == 7i64 && math.absI64(7i64) == 7i64, "i64 absolute value")
