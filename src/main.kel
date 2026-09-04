@@ -1,5 +1,5 @@
 const VALUE i64 = 42
-const LABEL str = "moglang/math v0.2.0"
+const LABEL str = "kelvralang/math v0.2.0"
 const PI f64 = 3.141592653589793
 const E f64 = 2.718281828459045
 
